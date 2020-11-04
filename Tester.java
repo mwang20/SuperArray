@@ -8,5 +8,13 @@ public class Tester{
     System.out.println(testSuper.get(0)); //Should return "hello"
     System.out.println();
     System.out.println(testSuper.get(1)); //Should return "yolo"
+    System.out.println();
+    System.out.println(testSuper.set(0, "bye")); //Should replace "hello" with "bye" and return "hello"
+    System.out.println();
+    System.out.println(testSuper.set(1, "oloy")); //Should replace "yolo" with "oloy" and return "yolo"
+    System.out.println();
+    System.out.println(testSuper.get(0)); //Should return "bye"
+    System.out.println();
+    System.out.println(testSuper.get(1)); //Should return "oloy"
   }
 }
