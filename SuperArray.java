@@ -40,4 +40,26 @@ public class SuperArray{
   public int capacity(){
     return capacity;
   }
+  public boolean isEmpty(){
+    if (size == 0){
+      return true;
+    }
+    return false;
+  }
+  public void clear(){
+    size = 0;
+  }
+  public String toString(){
+    String a = "";
+    for (int i = 0; i < size; i++){
+      if (i == 0){
+        a += "[" + data[i] + ", ";
+      }
+      else if (i == size - 1){
+        a += data[i] + "]";
+      }
+      else a += data[i] + ", ";
+    }
+    return a;
+  }
 }

@@ -27,5 +27,7 @@ public class Tester{
     System.out.println();
     testSuper.add("11"); //Should resize the array to 11 and add "11" to index 12
     System.out.println(testSuper.get(10));
+    System.out.println();
+    System.out.println(testSuper.toString());
   }
 }
