@@ -2,22 +2,22 @@ import java.util.Arrays;
 public class SuperArray{
   private String[] data;
   private int size;
-  public int length;
+  private int capacity;
   public SuperArray(){
-    data = new String[10];
+    capacity = 10;
+    data = new String[capacity];
     size = 0;
-    length = data.length;
   }
   public int size(){
     return size;
   }
   public boolean add(String element){
-    if (size < data.length){
+    if (size < capacity){
       data[size] = element;
       size += 1;
       return true;
     }
-    else if (size >= data.length){
+    else if (size >= capacity){
       resize();
       data[size] = element;
       size += 1;
@@ -34,12 +34,10 @@ public class SuperArray{
     return a;
   }
   private void resize(){
-    data = Arrays.copyOf(data, data.length + 1);
+    data = Arrays.copyOf(data, capacity + 1);
+    capacity += 1;
   }
-  public void resizeTest(){
-    resize();
-  }
-  public int arrayLength(){
-    return length;
+  public int capacity(){
+    return capacity;
   }
 }
