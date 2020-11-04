@@ -25,4 +25,18 @@ public class SuperArray{
     data[index] = element;
     return a;
   }
+  private void resize(){
+    int newCapacity = 15;
+    String[] copy = new String[newCapacity];
+    for (int i = 0; i < data.length; i++){
+      copy[i] = data[i];
+    }
+    data = new String[newCapacity];
+    for (int i = 0; i < data.length; i++){
+      data[i] = copy[i];
+    }
+  }
+  public void resizeTest(){
+    resize();
+  }
 }

@@ -16,5 +16,14 @@ public class Tester{
     System.out.println(testSuper.get(0)); //Should return "bye"
     System.out.println();
     System.out.println(testSuper.get(1)); //Should return "oloy"
+    System.out.println();
+    testSuper.resizeTest(); //Should change the capacity of data from 10 to 15
+    for (int i = 0; i < testSuper.size(); i++){
+      testSuper.add("test"); //Should add test to all the remaining indexes with no values
+    }
+    System.out.println();
+    for (int i = 0; i < testSuper.size(); i++){
+      System.out.println(testSuper.get(i)); //Should print out all the indexes of the array data
+    }
   }
 }
