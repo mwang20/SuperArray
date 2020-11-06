@@ -78,10 +78,17 @@ public class SuperArray{
   public void add(int index, String element){
     if ( data[index] != null ){
       resize();
-      for (int i = index; i < data.length - index; i++){
+      for (int i = index; i < data.length - 1; i++){
         data[i+1] = data[i];
       }
     }
     data[index] = element;
+  }
+  public String remove(int index){
+    String a = data[index];
+    for (int i = index; i < data.length - 1; i++){
+      data[i] = data[i + 1];
+    }
+    return a;
   }
 }

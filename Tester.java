@@ -44,5 +44,10 @@ public class Tester{
     for (int i = 0; i < testSuper2.capacity(); i++){
       System.out.println(testSuper2.get(i));
     }
+    System.out.println();
+    testSuper2.remove(3); //This should remove the shift added previously
+    for (int i = 0; i < testSuper2.capacity(); i++){
+      System.out.println(testSuper2.get(i));
+    }
   }
 }
