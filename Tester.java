@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Tester{
   public static void main(String[] args){
     SuperArray testSuper = new SuperArray();
@@ -49,5 +50,7 @@ public class Tester{
     System.out.println(testSuper2.indexOf("test")); //Should return 0
     System.out.println();
     System.out.println(testSuper2.indexOf("falseTest")); //Should return -1
+    System.out.println();
+    System.out.println(Arrays.toString(testSuper2.toArray()));
   }
 }
