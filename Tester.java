@@ -29,5 +29,9 @@ public class Tester{
     System.out.println(testSuper.get(10));
     System.out.println();
     System.out.println(testSuper.toString());
+    System.out.println();
+    System.out.println(testSuper.contains("bye")); //Should return true since it contains "bye"
+    System.out.println();
+    System.out.println(testSuper.contains("falseTest")); //Should return false since data does not contain "falseTest"
   }
 }
