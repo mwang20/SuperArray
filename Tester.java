@@ -33,5 +33,8 @@ public class Tester{
     System.out.println(testSuper.contains("bye")); //Should return true since it contains "bye"
     System.out.println();
     System.out.println(testSuper.contains("falseTest")); //Should return false since data does not contain "falseTest"
+    SuperArray testSuper2 = new SuperArray(10); //This is a new testing super array to test the new SuperArray constructor
+    System.out.println();
+    System.out.println(testSuper2.isEmpty()); //Should return true since testSuper2 is a new array
   }
 }
