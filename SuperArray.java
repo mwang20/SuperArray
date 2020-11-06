@@ -75,4 +75,13 @@ public class SuperArray{
     size = 0;
     capacity = initialCapacity;
   }
+  public void add(int index, String element){
+    if ( data[index] != null ){
+      resize();
+      for (int i = index; i < data.length - index; i++){
+        data[i+1] = data[i];
+      }
+    }
+    data[index] = element;
+  }
 }

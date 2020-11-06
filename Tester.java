@@ -36,5 +36,13 @@ public class Tester{
     SuperArray testSuper2 = new SuperArray(10); //This is a new testing super array to test the new SuperArray constructor
     System.out.println();
     System.out.println(testSuper2.isEmpty()); //Should return true since testSuper2 is a new array
+    System.out.println();
+    for (int i = testSuper2.size(); i < testSuper2.capacity() ; i++){
+      testSuper2.add("test"); //Need these to test the new add method to see how if it shifts
+    }
+    testSuper2.add(3, "shift"); //This should insert "shift" into the index 3 and shift all the other elements to the right while also resizing the testSuper2 array
+    for (int i = 0; i < testSuper2.capacity(); i++){
+      System.out.println(testSuper2.get(i));
+    }
   }
 }
