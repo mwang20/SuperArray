@@ -41,14 +41,10 @@ public class Tester{
       testSuper2.add("test"); //Need these to test the new add method to see how if it shifts
     }
     testSuper2.add(3, "shift"); //This should insert "shift" into the index 3 and shift all the other elements to the right while also resizing the testSuper2 array
-    for (int i = 0; i < testSuper2.capacity(); i++){
-      System.out.println(testSuper2.get(i));
-    }
+    System.out.println(testSuper2.toString());
     System.out.println();
     testSuper2.remove(3); //This should remove the shift added previously
-    for (int i = 0; i < testSuper2.capacity(); i++){
-      System.out.println(testSuper2.get(i));
-    }
+    System.out.println(testSuper2.toString());
     System.out.println();
     System.out.println(testSuper2.indexOf("test")); //Should return 0
     System.out.println();

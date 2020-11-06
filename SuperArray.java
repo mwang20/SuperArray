@@ -50,15 +50,15 @@ public class SuperArray{
     size = 0;
   }
   public String toString(){
-    String a = "";
-    for (int i = 0; i < size; i++){
-      if (i == 0){
-        a += "[" + data[i] + ", ";
+    String a = "[";
+    for (int i = 0; i < capacity; i++){
+      if (data[i] != null && i != capacity - 1){
+        a += data[i] + ", ";
       }
-      else if (i == size - 1){
+      else if (data[i] != null){
         a += data[i] + "]";
       }
-      else a += data[i] + ", ";
+      continue;
     }
     return a;
   }
