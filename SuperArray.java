@@ -91,4 +91,12 @@ public class SuperArray{
     }
     return a;
   }
+  public int indexOf(String s){
+    for (int i = 0; i < data.length; i++){
+      if (data[i].equals(s)){
+        return i;
+      }
+    }
+    return -1;
+  }
 }

@@ -49,5 +49,9 @@ public class Tester{
     for (int i = 0; i < testSuper2.capacity(); i++){
       System.out.println(testSuper2.get(i));
     }
+    System.out.println();
+    System.out.println(testSuper2.indexOf("test")); //Should return 0
+    System.out.println();
+    System.out.println(testSuper2.indexOf("falseTest")); //Should return -1
   }
 }
