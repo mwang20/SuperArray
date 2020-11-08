@@ -51,8 +51,8 @@ public class SuperArray{
   }
   public String toString(){
     String a = "[";
-    for (int i = 0; i < size(); i++){
-      if (data[i] != null && i != size() - 1){
+    for (int i = 0; i < size; i++){
+      if (data[i] != null && i != size - 1){
         a += data[i] + ", ";
       }
       else if (data[i] != null){
@@ -64,7 +64,7 @@ public class SuperArray{
     return a;
   }
   public boolean contains(String s){
-    for (int i = 0; i < size(); i++){
+    for (int i = 0; i < size; i++){
       if (data[i].equals(s)){
         return true;
       }
@@ -77,22 +77,23 @@ public class SuperArray{
     capacity = initialCapacity;
   }
   public void add(int index, String element){
+    String a = data[size - 1];
     if ( size < data.length ){
-      String a = data[size()];
-      for (int i = size(); i > index; i--){
+      for (int i = size; i > index; i--){
         data[i] = data[i-1];
       }
-      add(a);
     }
     if (size >= data.length){
       resize();
-      data[size()] = data[size()-1];
+      data[size] = data[size-1];
     }
     data[index] = element;
+    data[size] = a;
+    size += 1;
   }
   public String remove(int index){
     String a = data[index];
-    for (int i = index; i < size(); i++){
+    for (int i = index; i < size; i++){
       data[i] = data[i + 1];
     }
     return a;
