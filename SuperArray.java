@@ -92,14 +92,21 @@ public class SuperArray{
     size += 1;
   }
   public String remove(int index){
+    if (index >= size || index < 0 ){
+      return null;
+    }
     String a = data[index];
-    for (int i = index; i < size; i++){
+    for (int i = index; i < size-1; i++){
       data[i] = data[i + 1];
     }
+    size -= 1;
     return a;
   }
   public int indexOf(String s){
-    for (int i = 0; i < data.length; i++){
+    if (size == 0){
+      return -1;
+    }
+    for (int i = 0; i < size; i++){
       if (data[i].equals(s)){
         return i;
       }
