@@ -91,16 +91,16 @@ public class SuperArray{
     data[size] = a;
     size += 1;
   }
-  public String remove(int index){
-    if (index >= size || index < 0 ){
-      return null;
+  public String remove(int index) throws Exception{
+    if (index < size && index >= 0 ){
+      String a = data[index];
+      for (int i = index; i < size-1; i++){
+        data[i] = data[i + 1];
+      }
+      size -= 1;
+      return a;
     }
-    String a = data[index];
-    for (int i = index; i < size-1; i++){
-      data[i] = data[i + 1];
-    }
-    size -= 1;
-    return a;
+    throw new Exception("Invalid index"); //I can't do return null since Philip's tester file uses catch exception when testing for negative indexes
   }
   public int indexOf(String s){
     if (size == 0){
@@ -114,8 +114,8 @@ public class SuperArray{
     return -1;
   }
   public String[] toArray(){
-    String[] a = new String[data.length];
-    for ( int i = 0; i < data.length; i++){
+    String[] a = new String[size];
+    for ( int i = 0; i < size; i++){
       a[i] = data[i];
     }
     return a;
