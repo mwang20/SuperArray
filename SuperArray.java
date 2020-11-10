@@ -166,4 +166,35 @@ public class SuperArray{
     }
     return true;
   }
+  //My code for tzip
+  /*
+  public static SuperArray zip(SuperArray a, SuperArray b){
+    SuperArray c = new SuperArray();
+    if (a.size() > b.size()){
+      for (int i = 0; i < b.size(); i++){
+        c.add(a.get(i));
+        c.add(b.get(i));
+      }
+      for (int j = b.size(); j < a.size(); j++){
+        c.add(a.get(j));
+      }
+    }
+    if (b.size() > a.size()){
+      for (int i = 0; i < a.size(); i++){
+        c.add(a.get(i));
+        c.add(b.get(i));
+      }
+      for (int j = a.size(); j < b.size(); j++){
+        c.add(b.get(j));
+      }
+    }
+    if (a.size() == b.size()){
+      for (int i = 0; i < a.size(); i++){
+        c.add(a.get(i));
+        c.add(b.get(i));
+      }
+    }
+    return c;
+  }
+  */
 }
