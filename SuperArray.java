@@ -157,4 +157,13 @@ public class SuperArray{
     }
     return greater;
   }
+  public boolean equals(SuperArray other){
+    for (int i = 0; i < size; i++){
+      if (data[i].equals(other.get(i))){
+        continue;
+      }
+      else return false;
+    }
+    return true;
+  }
 }
