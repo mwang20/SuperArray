@@ -120,4 +120,15 @@ public class SuperArray{
     }
     return a;
   }
+  public static void removeDuplicates(SuperArray s)throws Exception{
+    for (int i = 0; i < s.size(); i++){
+      for (int j = 0; j < s.size(); j ++){
+        if (s.get(i).equals(s.get(j))){
+          s.remove(j);
+          i--;
+          break;
+        }
+      }
+    }
+  }
 }
