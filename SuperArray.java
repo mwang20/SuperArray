@@ -133,4 +133,28 @@ public class SuperArray{
     }
   }
   */
+  //My code for findOverlap
+  /*
+  public static SuperArray findOverlap(SuperArray a, SuperArray b){
+    SuperArray c = new SuperArray();
+    for (int i = 0; i < a.size(); i++){
+      if (a.get(i).equals(b.get(i))){
+        c.add(a.get(i));
+      }
+    }
+    return c;
+  }
+  */
+  public int lastIndexOf(String value){
+    if (indexOf(value) == size - 1){
+      return indexOf(value);
+    }
+    int greater = indexOf(value);
+    for (int i = indexOf(value) + 1; i < size; i++){
+      if (value.equals(data[i])){
+        greater = i;
+      }
+    }
+    return greater;
+  }
 }

@@ -22,6 +22,7 @@ public class newTester {
         c.add(a.get(i));
       }
     }
+    removeDuplicates(c);
     return c;
   }
 
