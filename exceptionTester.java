@@ -29,5 +29,15 @@ public class exceptionTester{
       System.out.println();
       System.out.println("This index is out of range");
     }
+    System.out.println();
+    System.out.println("~~ Testing the add method with exceptions ~~");
+    try{
+      SuperArray test = new SuperArray(500);
+      test.add(501, "notValid");
+    }
+    catch (Exception IllegalArgumentException){
+      System.out.println();
+      System.out.println("This index is out of range");
+    }
   }
 }
