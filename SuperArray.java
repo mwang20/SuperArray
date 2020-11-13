@@ -103,16 +103,16 @@ public class SuperArray{
     data[size] = a;
     size += 1;
   }
-  public String remove(int index) throws Exception{
-    if (index < size && index >= 0 ){
-      String a = data[index];
-      for (int i = index; i < size-1; i++){
-        data[i] = data[i + 1];
-      }
-      size -= 1;
-      return a;
+  public String remove(int index)throws IndexOutOfBoundsException{
+    if (index < 0 || index >= size()){
+      throw new IndexOutOfBoundsException("Index is out of range");
     }
-    throw new Exception("Invalid index"); //I can't do return null since Philip's tester file uses catch exception when testing for negative indexes
+    String a = data[index];
+    for (int i = index; i < size-1; i++){
+      data[i] = data[i + 1];
+    }
+    size -= 1;
+    return a;
   }
   public int indexOf(String s){
     if (size == 0){

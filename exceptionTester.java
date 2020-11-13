@@ -9,33 +9,47 @@ public class exceptionTester{
       System.out.println();
       System.out.println("This is an invalid capacity");
     }
+
     System.out.println();
     System.out.println("~~ Testing the get method with exceptions ~~");
     try{
       SuperArray test = new SuperArray(500);
       test.get(501);
     }
-    catch (Exception IllegalArgumentException){
+    catch (Exception IndexOutOfBoundsException){
       System.out.println();
       System.out.println("This index is out of range");
     }
+
     System.out.println();
     System.out.println("~~ Testing the set method with exceptions ~~");
     try{
       SuperArray test = new SuperArray(500);
       test.set(501, "notValid");
     }
-    catch (Exception IllegalArgumentException){
+    catch (Exception IndexOutOfBoundsException){
       System.out.println();
       System.out.println("This index is out of range");
     }
+
     System.out.println();
     System.out.println("~~ Testing the add method with exceptions ~~");
     try{
       SuperArray test = new SuperArray(500);
       test.add(501, "notValid");
     }
-    catch (Exception IllegalArgumentException){
+    catch (Exception IndexOutOfBoundsException){
+      System.out.println();
+      System.out.println("This index is out of range");
+    }
+
+    System.out.println();
+    System.out.println("~~ Testing the remove method with exceptions ~~");
+    try{
+      SuperArray test = new SuperArray(500);
+      test.remove(501);
+    }
+    catch (Exception IndexOutOfBoundsException){
       System.out.println();
       System.out.println("This index is out of range");
     }
