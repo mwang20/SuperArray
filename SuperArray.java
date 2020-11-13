@@ -71,7 +71,10 @@ public class SuperArray{
     }
     return false;
   }
-  public SuperArray(int initialCapacity){
+  public SuperArray(int initialCapacity)throws IllegalArgumentException{
+    if (initialCapacity < 0){
+      throw new IllegalArgumentException("Invalid capacity");
+    }
     data = new String[initialCapacity];
     size = 0;
     capacity = initialCapacity;
