@@ -33,7 +33,7 @@ public class SuperArray{
   }
   public String set(int index, String element)throws IndexOutOfBoundsException{
     if (index < 0 || index >= size()){
-      throw new IndexOutOfBoundsException("Index is out of range");
+      throw new IndexOutOfBoundsException("[set]Index is out of range" +index);
     }
     String a = data[index];
     data[index] = element;
@@ -86,10 +86,9 @@ public class SuperArray{
     capacity = initialCapacity;
   }
   public void add(int index, String element)throws IndexOutOfBoundsException{
-    if (index < 0 || index >= size()){
-      throw new IndexOutOfBoundsException("Index is out of range");
+    if (index < 0 || index > size()){
+      throw new IndexOutOfBoundsException("[add]Index is out of range " +index);
     }
-    String a = data[size - 1];
     if ( size < data.length ){
       for (int i = size; i > index; i--){
         data[i] = data[i-1];
@@ -100,12 +99,11 @@ public class SuperArray{
       data[size] = data[size-1];
     }
     data[index] = element;
-    data[size] = a;
     size += 1;
   }
   public String remove(int index)throws IndexOutOfBoundsException{
     if (index < 0 || index >= size()){
-      throw new IndexOutOfBoundsException("Index is out of range");
+      throw new IndexOutOfBoundsException("Index is out of range " +index);
     }
     String a = data[index];
     for (int i = index; i < size-1; i++){
