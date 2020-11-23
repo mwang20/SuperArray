@@ -96,7 +96,9 @@ public class SuperArray{
     }
     if (size >= data.length){
       resize();
-      data[size] = data[size-1];
+      for (int i = size; i > index; i--){
+        data[i] = data[i-1];
+      }
     }
     data[index] = element;
     size += 1;
